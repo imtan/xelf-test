@@ -83,7 +83,7 @@
 (defmethod collide ((paddle paddle) (wall wall))
   (with-slots (direction) paddle
     (setf direction (opposite-direction direction))
-    (move paddle (direction-heading direction) (* *paddle-speed* 2))))
+    (move paddle (direction-heading direction) *paddle-speed*)))
 
 (defmethod english ((paddle paddle))
   (with-slots (direction) paddle
